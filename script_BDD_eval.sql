@@ -40,3 +40,5 @@ alter table ajouter
 add constraint fk_ajouter_ticket
 foreign key(id_ticket)
 references ticket(id_ticket);
+
+select* from article;

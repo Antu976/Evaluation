@@ -1,9 +1,9 @@
 <?php
 function ticket($name,$prix,$bdd){
     try{
-        $req=$bdd->prepare('INSERT INTO article nom_article, prix_article) VALUES(?,?)');
+        $req=$bdd->prepare('INSERT INTO article (nom_article, prix_article) VALUES(?,?)');
         $req->bindParam(1,$name,PDO::PARAM_STR);
-        $req->bindParam(2,$prix,PDO::PARAM_STR);
+        $req->bindParam(2,$prix,PDO::PARAM_INT);
 
         $req->execute();
 

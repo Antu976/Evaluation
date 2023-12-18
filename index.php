@@ -2,11 +2,10 @@
 include("./model/model_article.php");
 include("./utils/bdd.php");
 
-
-$message ="";
-$afficherTicket ="";
-$name = "";
-$prix ="";
+$message = '';
+$afficherTicket = '';
+$name = '';
+$prix ='';
 
 
 if(isset($_POST['submit'])){
@@ -16,7 +15,6 @@ if(isset($_POST['submit'])){
         $name = htmlentities(strip_tags(trim($_POST['nom_article'])));
         $prix = htmlentities(strip_tags(trim($_POST['prix_article'])));
 
-        
         $message = ticket($name,$prix,$bdd);
 
     }
